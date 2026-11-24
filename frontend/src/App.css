@@ -35,3 +35,143 @@
   --icon-sun: #FFC53D;
   --icon-moon: #66666F;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--logo-due);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--slider-border);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--logo-due);
+}
+
+.logo span {
+  color: var(--logo-diss);
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  background: transparent;
+  border: none;
+  color: var(--nav-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-link.active {
+  color: var(--nav-text-active);
+  background-color: var(--nav-bg-active);
+}
+
+/* SLIDER BUTTON */
+.theme-slider {
+  position: relative;
+  width: 64px;
+  height: 32px;
+  background-color: var(--slider-bg);
+  border: 1px solid var(--slider-border);
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7px;
+}
+
+/* the round sliding knob */
+.slider-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--slider-knob);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* move knob to right when in darkmode */
+.theme-slider.dark .slider-knob {
+  transform: translateX(32px);
+}
+
+.slider-icon {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.sun-icon { color: var(--icon-sun); }
+.moon-icon { color: var(--icon-moon); }
+
+/* 3S - 1500MS FLASHBANG OVERLAY */
+.flashbang-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* S1 the flashbang :D */
+.flashbang-white {
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  z-index: 2;
+  animation: whiteFlash 1.5s linear forwards;
+}
+
+/* S2 flashbang cat underneath */
+.flashbang-cat {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+  animation: catFade 1.5s linear forwards;
+}
+
+/* 0-400ms (0%-27%): 100% solid white. 400-900ms (27%-60%): fades to reveal cat. 900-1500ms: gone*/
+@keyframes whiteFlash {
+  0% { opacity: 1; }
+  27% { opacity: 1; }
+  60% { opacity: 0.25; }
+  100% { opacity: 0; }
+}
+
+/* visible under white flash, then fades out from 900ms (60%) to 1500ms (100%) */
+@keyframes catFade {
+  0% { opacity: 1; }
+  60% { opacity: 1; }
+  100% { opacity: 0; }
+}
