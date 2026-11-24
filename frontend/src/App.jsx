@@ -31,7 +31,7 @@ function App() {
   return (
     <div className={`app-container ${theme === 'light' ? 'light-mode' : ''}`}>
      
-      {/* 3S 1500MS FLASHBANG OVERLAY */
+      {/* 3S 1500MS FLASHBANG OVERLAY 
       {showFlashbang && (
         <div className="flashbang-wrapper">
           <div className="flashbang-white"></div>
