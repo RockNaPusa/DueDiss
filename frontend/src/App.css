@@ -1,17 +1,37 @@
-/* dark mode button colors */
+/* DARK MODE -default */
 :root {
-  --toggle-bg: #1E1E22;
-  --toggle-border: #2E2E34;
-  --toggle-slider: #00FF66;
-  --icon-active: #000000;
-  --icon-inactive: #8D8D98;
+  --page-bg: #121214;
+  --nav-bg: #131315;
+  --logo-due: #fcfcfc;
+  --logo-diss: #00ff66;
+
+  --nav-text: #8D8D98;
+  --nav-text-active: #F4F4F6;
+  --nav-bg-active: #1E1E22;
+
+  /*button*/
+  --slider-bg: #1E1E22;
+  --slider-border: #2E2E34;
+  --slider-knob: #00FF66;
+  --icon-sun: #8D8D98;
+  --icon-moon: #000000;
 }
 
-/* light mode button colors */
+/* LIGHT MODE */
 .light-mode {
-  --toggle-bg: #FFFFFF;
-  --toggle-border: #D9D9D2;
-  --toggle-slider: #FFC53D;
-  --icon-active: #FFC53D;
-  --icon-inactive: #66666F;
+  --page-bg: #eeeeea;
+  --nav-bg: #ededea;
+  --logo-due: #141416;
+  --logo-diss: #00ff66;
+
+  --nav-text: #66666F;
+  --nav-text-active: #141416;
+  --nav-bg-active: #FFFFFF;
+
+  /*button*/
+  --slider-bg: #FFFFFF;
+  --slider-border: #D9D9D2;
+  --slider-knob: #FFC53D;
+  --icon-sun: #FFC53D;
+  --icon-moon: #66666F;
 }
