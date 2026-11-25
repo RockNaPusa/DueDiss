@@ -148,7 +148,7 @@ function App() {
     }
   };
 
-  // Panic Button: Mute the Roaster
+  // panic/mute button
   const handleMuteToggle = () => {
     if (!isMuted) {
       setIsMuted(true);
@@ -162,7 +162,7 @@ function App() {
   return (
     <div className={`app-container ${theme === 'light' ? 'light-mode' : ''}`}>
       
-      {/* FLASHBANG OVERLAY */}
+      {/* white to flashbang cat overlay */}
       {showFlashbang && (
         <div className="flashbang-wrapper">
           <div className="flashbang-white"></div>
@@ -170,7 +170,7 @@ function App() {
         </div>
       )}
 
-      {/* TOP NAVBAR */}
+      {/* navbar */}
       <nav className="navbar">
         <div className="logo">
           Due<span>Diss</span>
@@ -195,7 +195,7 @@ function App() {
             <span className="xp-numbers">0 / 500 XP</span>
           </div>
 
-          {/* SLIDER TOGGLE BUTTON */}
+          {/* slider button d/l m */}
           <button
             className={`theme-slider ${theme}`}
             onClick={handleToggleTheme}
@@ -208,7 +208,7 @@ function App() {
         </div>
       </nav>
 
-      {/* 2-COLUMN DASHBOARD LAYOUT */}
+      {/* 2 column dahsboard */}
       <main className="dashboard-grid">
         
         {/* LEFT COLUMN (70%): WORK ZONE PLACEHOLDER */}
@@ -229,7 +229,7 @@ function App() {
             </span>
           </div>
 
-          {/* DARK STYLIZED TERMINAL BOX */}
+          {/* terminal box - dark style */}
           <div className="roaster-terminal">
             <p className="roast-output">
               <span className="prompt-arrow">&gt; </span>
@@ -238,7 +238,7 @@ function App() {
             </p>
           </div>
 
-          {/* ACTION BUTTONS */}
+          {/* buttons */}
           <div className="roaster-actions">
             <button 
               className="roast-again-btn" 
