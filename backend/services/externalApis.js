@@ -32,7 +32,7 @@ const getRiskLevel = async (stats) => {
     );
     if (!res.ok) throw new Error(`ML API status ${res.status}`);
     const data = await res.json();
-    const raw = String(data.risk_level || data.riskLevel || '').toLowerCase();
+    const raw = String(data.risk || data.risk_level || data.riskLevel || '').toLowerCase();
     const match = RISK_LEVELS.find((r) => r.toLowerCase() === raw);
     if (!match) throw new Error('ML API returned an unknown risk level');
     return match;
